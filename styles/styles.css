@@ -1,0 +1,672 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anek Latin', sans-serif;
+ 
+}
+
+/* propiedades YSDM Index.html */
+/* propiedades header */
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: header;
+}
+
+.Menu ul li{
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    font-size: medium;
+    color: black;
+    align-content: end;
+    font-size: 26px;
+    position: relative;
+    grid-area: header;
+
+}
+
+header div img{
+    width: 40%;
+    margin: 0;
+    grid-area: header;
+}
+
+/* propiedades contenedor-general */
+.contenedor-principal{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: auto auto;
+
+    grid-template-areas: "header header"
+                         "section main"
+                         "palabras palabras"
+                         "contacto contacto"
+                         "donate donate"
+                         "footer footer"
+    ;
+}
+
+/* propiedades main */
+
+main{
+    margin: 15px;
+    padding: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: main;
+    
+}
+
+/*propiedades de video*/
+
+main div iframe {
+    padding:15px;
+    margin: 15px; 
+    display: flex;
+    align-items: auto;
+    grid-area: section;
+    position: auto;
+    
+}  
+
+/*propiedades H1*/
+
+div h1{
+    padding: auto;
+    margin: 15px;
+    display: flex;
+ 
+    text-align: left;
+    font-size: 18px;
+    position: relative;
+    grid-area: main;
+
+}
+
+/*propiedades span palabras */
+
+.palabras{
+    padding: 15px;
+    margin: 30px;
+    display: flex;
+    box-sizing: border-box solid rgb(150, 150, 150);
+    align-content: auto;
+    position: center;
+    grid-area: palabras;
+    
+}
+
+.palabras div ul li{
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-block;
+    position: center;
+}
+
+/*propiedades span h2 */
+
+.contacto{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    grid-area: contacto;
+}
+
+.Instagram{
+    padding: 15px;
+    margin: 15px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 20px;
+    align-content: center;
+    align-items: center;
+    grid-area: contacto;
+   
+}
+
+/*propiedades h3Donate */
+
+.donar{
+    background-color: aquamarine;
+    display: block;
+    justify-content:center;
+    align-items: center;
+    grid-area: donate;
+}
+
+.Paypal{
+    padding: 15px;
+    margin: 15px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 20px;
+    align-content: center;
+    align-items: center;
+    grid-area: donate;
+   
+}
+.Binance{
+    padding: 15px;
+    margin: 15px;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 18px;
+    align-content: center;
+    align-items: center;
+    grid-area: donate;
+   
+}
+/* propiedades footer YSDM */
+
+footer{
+    display: flex;
+    margin-top: 500px;
+    justify-content:center;
+    align-items: center;
+    grid-area: footer;
+}
+
+
+/*Aca empieza hoja de estilos - About us*/
+
+/* propiedades Main-AboutUS */
+.contenedorAu{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+                         "nosotrosAu nosotrosAu "
+                         "manifiesto manifiesto"
+                         "tierra agua"
+                         "fuego aire"
+                        ;
+}
+
+.nosotrosAu {
+    padding: 0;
+    margin: 15px;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    align-items: center;            
+    background-color: violet;
+    grid-area: nosotrosAu;
+}
+
+.manifiesto{
+    background-color: bisque;
+    height: 300px;
+    width: 500px;
+    position: relative;
+    border: 2px solid antiquewhite;
+    grid-area: manifiesto;
+}
+
+.tierra{
+   height: 200px;
+   width: 200px;
+   padding: 0;
+    background-color: brown;
+    margin: 15px;
+    position: relative;
+    align-content: space-between;
+    grid-area: tierra;
+}
+
+.agua{
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    background-color: rgb(32, 190, 196);
+    margin: 15px;
+    position: relative;
+    align-content: space-between;
+    grid-area: agua;
+    font-size: 60px;
+}
+
+.fuego{
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    background-color: rgb(234, 96, 11);
+    margin: 15px;
+    position: relative;
+    align-content: space-between;
+    grid-area: fuego;
+}
+.aire{
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    background-color: rgb(214, 253, 252);
+    margin: 15px;
+    position: relative;
+    align-content: space-between;
+    grid-area: aire;
+}
+
+
+
+/*Aca empieza la hoja de estilos - Contact.html */
+
+
+/*propiedades contenedorCont*/
+
+.content {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+                         "titulo"
+                         "sectionContact" 
+                         "formularioContact";
+    /*justify-content: center;
+    justify-items: center;
+    align-items: center;*/
+}
+
+
+/* propiedades Main - Contact */
+.titulo{
+    margin: 15px;
+    font-size: 18px;
+    text-align: center;
+    background-color: aqua;
+    grid-area: titulo;
+}
+.sectionContact{
+    height: 100px;
+    width: 200px;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+    grid-area: sectionContact;
+}
+
+.formularioContact{
+    background-color: green;
+    margin: 15px;
+    justify-content: center;
+    grid-area: formularioContact;
+}
+
+
+
+/*Aca empieza la hoja de estilos - Projects.html */
+
+
+/* propiedades Main - Projects */
+
+.ContenedorProjects{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "textoProjects"
+                         "videoManifiesto"
+                         "palabrasProjects"
+                         "imagenesProjects";
+    background-color: bisque;
+}
+
+.textoProjects{
+    margin: 15px;
+    font-size: 18px;
+    text-decoration: black;
+    text-align: center;
+    justify-content: center;
+    background-color: aqua;
+    grid-area: textoProjects;
+}
+
+.videoManifiesto{
+    width: 500px;
+    height: 350px;
+    margin-left: 450px;
+    background-color: green;
+    grid-area: videoManifiesto;
+}
+
+.palabrasProjects{
+    text-decoration: none;
+    padding: 15px;
+    margin: 30px;
+    background-color: lightcyan;
+    align-content: auto;
+    position: center;
+    grid-area: palabrasProjects;
+    
+}
+
+.PalabrasProjects div ul li{
+    text-decoration: none;
+    font-size: 30px;
+    background-color: lightpink;
+    position: center;
+    grid-area: palabrasProjects;
+}
+.imagenesProjects{
+    grid-area: imagenesProjects;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "aire fuego"
+                         "tierra agua";
+}
+.projectTierra{
+    height: 200px;
+    width: 200px;
+    padding: 0;
+    background-color: brown;
+    margin: 15px;
+    justify-content: center;
+    align-content: space-between;
+    grid-area: tierra;
+ }
+ 
+ .projectAgua{
+     height: 200px;
+     width: 200px;
+     padding: 0;
+     background-color: rgb(32, 190, 196);
+     margin: 15px;
+     justify-content: center;
+     align-content: space-between;
+     grid-area: agua;
+     font-size: 60px;
+ }
+ 
+ .projectFuego{
+     height: 200px;
+     width: 200px;
+     padding: 0;
+     background-color: rgb(234, 96, 11);
+     margin: 15px;
+     justify-content: center;
+     align-content: space-between;
+     grid-area: fuego;
+ }
+ .projectAire{
+     height: 200px;
+     width: 200px;
+     padding: 0;
+     background-color: rgb(7, 164, 158);
+     margin: 15px;
+     justify-content: center;
+     align-content: space-between;
+     grid-area: aire;
+ }
+
+ .Podcast{
+    height: 100px;
+    width: 300px;
+    background-color: red;
+    justify-content: center;
+    position: relative;
+    grid-area: Podcast;
+ }
+
+
+
+/* Aca empieza hoja estilos - Donate.html */
+
+
+/* propiedades main - Donate */
+
+
+.donate{
+    padding: auto;
+    margin: 15px;
+    display: auto;
+   
+    text-align: justify;
+    font-size: 18px;
+    align-items: center;
+}
+
+
+
+
+
+/*MediaQuery Tablet*/
+
+@media screen and (max-width: 600px){
+    .Menu ul li{
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+    .logoIndex{
+        height: 20%;
+        width: 20%;
+    }
+    main{
+        font-size: 0.9rem;
+    }
+    main div h1{
+        font-size: 0.5rem;
+    }
+   .section-uno main div iframe{
+        height: 20%;
+        width: 20%;
+    }
+    .palabras div ul li{
+        font-size: 1rem;
+    }
+
+    .contacto{
+        font-size: 0.5rem;
+    }
+    .Instagram{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+    }
+    .donar{
+        font-size: 0.5rem;
+    }
+    .Paypal{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+    }
+    .Binance{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+        align-content: center;
+    }
+
+    footer{
+        font-size: 0.4rem;
+    }
+
+    .nosotrosAu{
+        font-size: 0.8rem;
+    }
+
+    .manifiesto{
+        width: 2rem;
+        height: 1.3rem;
+        font-size: 0.8rem;
+    }
+
+    .tierra{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .agua{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .fuego{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .aire{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+
+    .titulo{
+        font-size: 1rem;
+    }
+    .ContInstagram{
+        width: 0.9rem;
+        height: 0.7rem;
+        font-size: 0.6rem;
+
+    }
+
+    .formularioContact{
+        width: 0.9rem;
+        height: 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .textoProjects{
+        font-size: 1.4rem;
+    }
+    .videoManifiesto{
+        font-size: 0.7rem;
+    }
+    .palabrasProjects{
+        font-size: 0.9rem;
+    }
+
+    .imagenesProjects{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+}
+
+
+/*MediaQuery Celu*/
+
+@media screen and (max-width: 320px){
+    .Menu ul li{
+        justify-content: center;
+        display: flex;
+        font-size: 0.8rem;
+    }
+    .logoIndex{
+        height: 10%;
+        width: 10%;
+    }
+    main{
+        font-size: 0.4rem;
+    }
+    main div h1{
+        font-size: 0.5rem;
+    }
+   .section-uno main div iframe{
+        height: 15%;
+        width: 15%;
+    }
+    .palabras div ul li{
+        font-size: 1rem;
+    }
+
+    .contacto{
+        font-size: 0.5rem;
+    }
+    .Instagram{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+    }
+    .donar{
+        font-size: 0.5rem;
+    }
+    .Paypal{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+    }
+    .Binance{
+        width: 1.2rem;
+        height: 0.8rem;
+        font-size: 0.5rem;
+        align-content: center;
+    }
+
+    footer{
+        font-size: 0.4rem;
+    }
+
+    .nosotrosAu{
+        font-size: 0.8rem;
+    }
+
+    .manifiesto{
+        width: 2rem;
+        height: 1.3rem;
+        font-size: 0.8rem;
+    }
+
+    .tierra{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .agua{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .fuego{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+    .aire{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+
+    .titulo{
+        font-size: 1rem;
+    }
+    .ContInstagram{
+        width: 0.9rem;
+        height: 0.7rem;
+        font-size: 0.6rem;
+
+    }
+
+    .formularioContact{
+        width: 0.9rem;
+        height: 0.7rem;
+        font-size: 0.6rem;
+    }
+
+    .textoProjects{
+        font-size: 1.4rem;
+    }
+    .videoManifiesto{
+        font-size: 0.7rem;
+    }
+    .palabrasProjects{
+        font-size: 0.9rem;
+    }
+
+    .imagenesProjects{
+        width: 1rem;
+        height: 0.6rem;
+        font-size: 0.3rem;
+    }
+}
+
