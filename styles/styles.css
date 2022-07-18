@@ -36,6 +36,22 @@ header div img{
     grid-area: header;
 }
 
+.logoIndex{
+    animation-name: saludar;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes saludar{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(45deg);
+    }
+}
 /* propiedades contenedor-general */
 .contenedor-principal{
     height: 100vh;
@@ -182,6 +198,7 @@ footer{
 .contenedorAu{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    grid-template-rows: repeat(3fr);
     grid-template-areas:
                          "nosotrosAu nosotrosAu "
                          "manifiesto manifiesto"
@@ -196,7 +213,7 @@ footer{
     text-align: center;
     font-size: 18px;
     position: relative;
-    align-items: center;            
+    justify-content: center;
     background-color: violet;
     grid-area: nosotrosAu;
 }
@@ -206,7 +223,14 @@ footer{
     height: 300px;
     width: 500px;
     position: relative;
+    justify-content: center;
     border: 2px solid antiquewhite;
+    grid-area: manifiesto;
+}
+
+.videoAu{
+    justify-content: center;
+    position: absolute;
     grid-area: manifiesto;
 }
 
