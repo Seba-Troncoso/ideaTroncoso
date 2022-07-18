@@ -230,6 +230,7 @@ footer{
 
 .videoAu{
     justify-content: center;
+    position: absolute;
     grid-area: manifiesto;
 }
 
