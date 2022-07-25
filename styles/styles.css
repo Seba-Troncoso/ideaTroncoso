@@ -17,7 +17,7 @@ a:visited{
     color: rgb(87, 87, 87);
 }
 a:active{
-    background-color: rgb(135, 187, 5);
+    background-color: rgb(193, 199, 112);
     padding: 0.2rem;
 }
 
@@ -52,6 +52,27 @@ header div img{
     grid-area: header;
 }
 
+/*animacionLogoIndex*/
+.logoIndex{
+    width: 40%;
+    padding: 0;
+    animation-name: saludar;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+@keyframes saludar{
+    from{
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(45deg);
+    }
+
+}
+
 /* propiedades contenedor-general */
 .contenedor-principal{
     height: 100vh;
@@ -63,7 +84,7 @@ header div img{
                          "section main"
                          "palabras palabras"
                          "contacto contacto"
-                         "donate donate"
+                         "seccion seccion"
                          "footer footer"
     ;
 }
@@ -72,7 +93,8 @@ header div img{
 
 main{
     margin: 15px;
-    padding: auto;
+    margin-right: 30px;
+    padding: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -84,7 +106,8 @@ main{
 
 main div iframe {
     padding:15px;
-    margin: 15px; 
+    margin: 30px;
+    margin-left: 30px;
     display: flex;
     align-items: auto;
     grid-area: section;
@@ -98,9 +121,8 @@ div h1{
     padding: auto;
     margin: 15px;
     display: flex;
- 
-    text-align: left;
-    font-size: 18px;
+    text-align: center;
+    font-size: 20px;
     position: relative;
     grid-area: main;
 
@@ -151,36 +173,43 @@ div h1{
 
 /*propiedades h3Donate */
 
+.seccionIndex{
+    display: flex;
+    grid-area: seccion;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "donar donar"
+                         "paypal binance";
+    justify-content: space-between;
+}
 .donar{
-    background-color: aquamarine;
-    display: block;
-    justify-content:center;
-    align-items: center;
-    grid-area: donate;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 4rem;
+    grid-area: donar;
 }
 
-.Paypal{
+
+.paypal{
     padding: 15px;
-    margin: 15px;
-    box-sizing: border-box;
-    display: flex;
-    font-size: 20px;
-    align-content: center;
-    align-items: center;
-    grid-area: donate;
-   
+    margin-top: 3rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    grid-area: paypal;
+    background-color: rgb(89, 253, 92);
 }
-.Binance{
+
+.binance{
     padding: 15px;
-    margin: 15px;
-    box-sizing: border-box;
-    display: flex;
-    font-size: 18px;
-    align-content: center;
-    align-items: center;
-    grid-area: donate;
-   
+    margin-top: 3rem;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    grid-area: binance;
+    background-color: rgb(222, 200, 5);
 }
+
 /* propiedades footer YSDM */
 
 footer{
@@ -198,6 +227,7 @@ footer{
 .contenedorAu{
     display: grid;
     grid-template-columns: 2fr 2fr;
+    grid-template-rows: 4fr 4fr;
     grid-template-areas:
                          "nosotrosAu nosotrosAu "
                          "manifiesto manifiesto"
@@ -207,66 +237,72 @@ footer{
 }
 
 .nosotrosAu {
+    gap: 10px;
     padding: 0;
     margin: 15px;
     text-align: center;
-    font-size: 18px;
-    position: relative;
-    align-items: center;            
-    background-color: violet;
+    font-size: 20px;
+    position: absolute;
+    justify-content: center;
     grid-area: nosotrosAu;
 }
 
 .manifiesto{
-    background-color: bisque;
-    height: 300px;
-    width: 500px;
+    position:absolute;
+    padding-right: 200px;
+    padding-left: 200px;
+    grid-area: manifiesto;
+}
+
+.videoPeld{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 15px;
     position: relative;
-    border: 2px solid antiquewhite;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    justify-content: center;
     grid-area: manifiesto;
 }
 
 .tierra{
-   height: 200px;
-   width: 200px;
-   padding: 0;
-    background-color: brown;
-    margin: 15px;
-    position: relative;
-    align-content: space-between;
-    grid-area: tierra;
+   height: 50%;
+   width: 50%;
+   padding-top: 300px;
+   margin: 30px;
+   position: relative;
+   justify-content: space-between;
+   grid-area: tierra;
 }
 
 .agua{
-    height: 200px;
-    width: 200px;
-    padding: 0;
-    background-color: rgb(32, 190, 196);
-    margin: 15px;
+    height: 50%;
+    width: 50%;
+    padding-top: 300px;
+    margin: 30px;
     position: relative;
-    align-content: space-between;
+    justify-content: space-between;
     grid-area: agua;
-    font-size: 60px;
 }
 
 .fuego{
-    height: 200px;
-    width: 200px;
-    padding: 0;
-    background-color: rgb(234, 96, 11);
-    margin: 15px;
+    height: 50%;
+    width: 50%;
+    padding-top: 80px;
+    margin: 30px;
     position: relative;
-    align-content: space-between;
+    justify-content: space-between;
     grid-area: fuego;
 }
 .aire{
-    height: 200px;
-    width: 200px;
-    padding: 0;
-    background-color: rgb(214, 253, 252);
-    margin: 15px;
+    height: 50%;
+    width: 50%;
+    padding-top: 80px;
+    margin: 30px;
     position: relative;
-    align-content: space-between;
+    justify-content: space-between;
     grid-area: aire;
 }
 
@@ -286,31 +322,30 @@ footer{
                          "titulo"
                          "sectionContact" 
                          "formularioContact";
-    /*justify-content: center;
+    justify-content: center;
     justify-items: center;
-    align-items: center;*/
+    align-items: center;
 }
 
 
 /* propiedades Main - Contact */
 .titulo{
     margin: 15px;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
-    background-color: aqua;
     grid-area: titulo;
 }
 .sectionContact{
     height: 100px;
     width: 200px;
-    background-color: lightgray;
     justify-content: center;
-    align-items: center;
     grid-area: sectionContact;
+    
 }
 
 .formularioContact{
-    background-color: green;
+    height: 100%;
+    height: 100%;
     margin: 15px;
     justify-content: center;
     grid-area: formularioContact;
@@ -330,7 +365,6 @@ footer{
                          "videoManifiesto"
                          "palabrasProjects"
                          "imagenesProjects";
-    background-color: bisque;
 }
 
 .textoProjects{
@@ -339,7 +373,6 @@ footer{
     text-decoration: black;
     text-align: center;
     justify-content: center;
-    background-color: aqua;
     grid-area: textoProjects;
 }
 
@@ -347,79 +380,94 @@ footer{
     width: 500px;
     height: 350px;
     margin-left: 450px;
-    background-color: green;
     grid-area: videoManifiesto;
 }
 
 .palabrasProjects{
-    text-decoration: none;
-    padding: 15px;
-    margin: 30px;
-    background-color: lightcyan;
+    padding: 4rem;
+    display: flex;
+    box-sizing: border-box solid rgb(150, 150, 150);
     align-content: auto;
     position: center;
+    text-decoration: none;
     grid-area: palabrasProjects;
-    
+    animation-name: palabrasProjects;
+    animation-duration: 2s;
+    animation-timing-function: linear;
 }
 
-.PalabrasProjects div ul li{
-    text-decoration: none;
-    font-size: 30px;
-    background-color: lightpink;
-    position: center;
+@keyframes palabrasProjects{
+    from{
+        transform: scale(0.3);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+.palabrasProjects div {
+    background-color:rgb(79, 79, 79);
+    border-radius: 1rem;
+}
+
+.palabrasProjects div ul li{
+    color: white;
+    text-align: center;
+    justify-content: center;
+    font-size: 26px;
     grid-area: palabrasProjects;
 }
+
+
 .imagenesProjects{
     grid-area: imagenesProjects;
     display: grid;
     grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: "aire fuego"
                          "tierra agua";
 }
+
+.projectFuego{
+    height: 50%;
+    width: 50%;
+    padding-top: 250px;
+    margin: 30px;
+    position: relative;
+    justify-content: space-between;
+     grid-area: fuego;
+ }
+ .projectAire{
+    height: 50%;
+    width: 50%;
+    padding-top: 250px;
+    margin: 30px;
+    position: relative;
+    justify-content: space-between;
+    grid-area: aire;
+ }
 .projectTierra{
-    height: 200px;
-    width: 200px;
-    padding: 0;
-    background-color: brown;
-    margin: 15px;
-    justify-content: center;
-    align-content: space-between;
+    height: 50%;
+   width: 50%;
+   padding-top: 250px;
+   margin: 30px;
+   position: relative;
+   justify-content: space-between;
     grid-area: tierra;
  }
  
  .projectAgua{
-     height: 200px;
-     width: 200px;
-     padding: 0;
-     background-color: rgb(32, 190, 196);
-     margin: 15px;
-     justify-content: center;
-     align-content: space-between;
-     grid-area: agua;
-     font-size: 60px;
+    height: 50%;
+   width: 50%;
+   padding-top: 250px;
+   margin: 30px;
+   position: relative;
+   justify-content: space-between;
+    grid-area: agua;
  }
  
- .projectFuego{
-     height: 200px;
-     width: 200px;
-     padding: 0;
-     background-color: rgb(234, 96, 11);
-     margin: 15px;
-     justify-content: center;
-     align-content: space-between;
-     grid-area: fuego;
- }
- .projectAire{
-     height: 200px;
-     width: 200px;
-     padding: 0;
-     background-color: rgb(7, 164, 158);
-     margin: 15px;
-     justify-content: center;
-     align-content: space-between;
-     grid-area: aire;
- }
+
 
  .Podcast{
     height: 100px;
@@ -455,6 +503,9 @@ footer{
 /*MediaQuery Tablet*/
 
 @media screen and (max-width: 600px){
+    header{
+        background-color: rgb(249, 193, 109);
+    }
     .Menu ul li{
         justify-content: center;
         font-size: 0.8rem;
@@ -569,7 +620,7 @@ footer{
     }
 
     footer{
-        background-color: bisque;
+        background-color: rgb(255, 145, 10);
     }
 }
 
@@ -577,6 +628,9 @@ footer{
 /*MediaQuery Celu*/
 
 @media screen and (max-width: 320px){
+    header{
+        background-color: rgb(246, 181, 82);
+    }
     .Menu ul li{
         justify-content: center;
         display: flex;
