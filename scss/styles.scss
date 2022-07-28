@@ -1,6 +1,8 @@
 @import "base/variables";
 
 
+
+
 *{
     margin: 0%;
     padding: 0;
@@ -326,8 +328,8 @@ footer{
 }
 
 .tierra{
-   height: 50%;
-   width: 50%;
+   height: $imagenes;
+   width: $imagenes;
    padding-top: 300px;
    margin: 30px;
    position: relative;
@@ -336,8 +338,8 @@ footer{
 }
 
 .agua{
-    height: 50%;
-    width: 50%;
+    height: $imagenes;
+    width: $imagenes;
     padding-top: 300px;
     margin: 30px;
     position: relative;
@@ -346,8 +348,8 @@ footer{
 }
 
 .fuego{
-    height: 50%;
-    width: 50%;
+    height: $imagenes;
+    width: $imagenes;
     padding-top: 80px;
     margin: 30px;
     position: relative;
@@ -355,8 +357,8 @@ footer{
     grid-area: fuego;
 }
 .aire{
-    height: 50%;
-    width: 50%;
+    height: $imagenes;
+    width: $imagenes;
     padding-top: 80px;
     margin: 30px;
     position: relative;
@@ -372,7 +374,7 @@ footer{
 /*propiedades contenedorCont*/
 
 .content {
-    height: 50vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr;
@@ -497,8 +499,8 @@ footer{
      grid-area: fuego;
  }
  .projectAire{
-    height: 50%;
-    width: 50%;
+    height: $imagenes;
+    width: $imagenes;
     padding-top: 250px;
     margin: 30px;
     position: relative;
@@ -506,8 +508,8 @@ footer{
     grid-area: aire;
  }
 .projectTierra{
-    height: 50%;
-   width: 50%;
+   height: $imagenes;
+   width: $imagenes;
    padding-top: 250px;
    margin: 30px;
    position: relative;
@@ -516,8 +518,8 @@ footer{
  }
  
  .projectAgua{
-    height: 50%;
-   width: 50%;
+    height: $imagenes;
+   width: $imagenes;
    padding-top: 250px;
    margin: 30px;
    position: relative;
