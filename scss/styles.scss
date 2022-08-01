@@ -1,8 +1,6 @@
 @import "base/variables";
 
 
-
-
 *{
     margin: 0%;
     padding: 0;
@@ -36,26 +34,29 @@ header{
     justify-content: space-around;
     align-items: center;
     grid-area: header;
+    
+    .Menu ul li{
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        font-size: medium;
+        color: black;
+        align-content: end;
+        font-size: 26px;
+        position: relative;
+        grid-area: header;
+    
+    }
+    
+    header div img{
+        width: 40%;
+        margin: 0;
+        grid-area: header;
+    }
+
 }
 
-.Menu ul li{
-    padding: 5px;
-    margin: 5px;
-    display: flex;
-    font-size: medium;
-    color: black;
-    align-content: end;
-    font-size: 26px;
-    position: relative;
-    grid-area: header;
 
-}
-
-header div img{
-    width: 40%;
-    margin: 0;
-    grid-area: header;
-}
 
 /*animacionLogoIndex*/
 .logoIndex{
