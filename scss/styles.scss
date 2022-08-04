@@ -86,8 +86,8 @@ header{
 .contenedor-principal{
     height: 100vh;
     display: grid;
-    grid-template-columns: 1.5fr 2fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 2fr 2fr;
 
     grid-template-areas: "header header"
                          "section main"
@@ -95,7 +95,7 @@ header{
                          "indexImagenes indexImagenes"
                          "indexImagenes indexImagenes"
                          "contacto contacto"
-                         "seccion seccion"
+                         "seccionIndex seccionIndex"
                          "footer footer"
     ;
 }
@@ -121,13 +121,13 @@ main div iframe {
     margin-left: 30px;
     display: flex;
     align-items: auto;
-    grid-area: section;
     position: auto;
     
 }  
 
 .section-uno{
     margin: 2rem;
+    grid-area: section;
 }
 
 /*propiedades H1*/
@@ -163,6 +163,7 @@ div h1{
 /*prop indexImagenes*/
 .indexImagenes{
     display: grid;
+    grid-area: indexImagenes;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4fr 4fr;
     grid-template-areas: "tierra agua"
@@ -226,8 +227,6 @@ div h1{
     display: flex;
     font-size: 20px;
     align-content: center;
-    align-items: center;
-    grid-area: contacto;
    
 }
 
@@ -235,7 +234,7 @@ div h1{
 
 .seccionIndex{
     display: flex;
-    grid-area: seccion;
+    grid-area: seccionIndex;
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 2fr 2fr;
