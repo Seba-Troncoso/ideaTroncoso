@@ -1,4 +1,7 @@
 @import "base/variables";
+@import "base/mixin";
+@import "base/mapa";
+@import "base/extend";
 
 
 *{
@@ -49,8 +52,8 @@ header{
     }
     
     header div img{
-        width: 40%;
-        margin: 0;
+        width: map-get($map:medidaStandar, $key: tamaño)
+        margin;
         grid-area: header;
     }
 
@@ -64,7 +67,7 @@ header{
     padding: 0;
     animation-name: saludar;
     animation-iteration-count: infinite;
-    animation-duration: 5s;
+    animation-duration: 6s;
     animation-timing-function: linear;
 }
 
@@ -89,6 +92,8 @@ header{
     grid-template-areas: "header header"
                          "section main"
                          "palabras palabras"
+                         "indexImagenes indexImagenes"
+                         "indexImagenes indexImagenes"
                          "contacto contacto"
                          "seccion seccion"
                          "footer footer"
@@ -152,16 +157,11 @@ div h1{
 }
 
 .palabras div ul li{
-    text-decoration: none;
-    font-size: 2.8rem;
-    text-align: justify ;
-    display: inline-block;
-    justify-content: center;
-    
+    @include palabrasYSDM;
 }
 
 /*prop indexImagenes*/
-/*.indexImagenes{
+.indexImagenes{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 4fr 4fr;
@@ -206,7 +206,7 @@ div h1{
     justify-content: space-between;
     grid-area: aire;
 }
-*/
+
 
 /*propiedades span h2 */
 
@@ -274,10 +274,7 @@ div h1{
 /* propiedades footer YSDM */
 
 footer{
-    display: flex;
-    margin-top: 500px;
-    justify-content:center;
-    align-items: center;
+    @extend %footerYSDM;
     grid-area: footer;
 }
 
@@ -445,12 +442,7 @@ footer{
 }
 
 .palabrasProjects{
-    padding: 4rem;
-    display: flex;
-    box-sizing: border-box solid rgb(150, 150, 150);
-    align-content: auto;
-    position: center;
-    text-decoration: none;
+    @include palabrasYSDM;
     grid-area: palabrasProjects;
     animation-name: palabrasProjects;
     animation-duration: 2s;
@@ -572,94 +564,116 @@ footer{
     .Menu ul li{
         flex-direction: column;
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1rem;
         background-color: bisque;
     }
 
     header div .logoIndex{
-        background-color: brown;
+        height: 40%;
+        width: 40%;
+        justify-content: center;
     }
     
     .logoIndex{
-        height: 20%;
-        width: 20%;
-        position: absolute;
-        background-color: red;
+        height: 40%;
+        width: 40%;
+        flex-direction: column;
+        position: center;
+        
     }
     main{
         font-size: 0.9rem;
+        position: absolute;
+        flex-direction: column;
     }
     main div h1{
         font-size: 0.5rem;
+        position: relative;
+        flex-direction: column;
     }
    .section-uno main div iframe{
         height: 20%;
         width: 20%;
+        flex-direction: column;
     }
     .palabras div ul li{
         font-size: 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 
     .contacto{
         font-size: 0.5rem;
+        flex-direction: column;
     }
     .Instagram{
         width: 1.2rem;
         height: 0.8rem;
         font-size: 0.5rem;
+        flex-direction: column;
     }
     .donar{
         font-size: 0.5rem;
+        flex-direction: column;
     }
     .Paypal{
         width: 1.2rem;
         height: 0.8rem;
         font-size: 0.5rem;
+        flex-direction: column;
+        justify-items: center;
     }
     .Binance{
         width: 1.2rem;
         height: 0.8rem;
         font-size: 0.5rem;
-        align-content: center;
+        flex-direction: column;
+        justify-items: center;
     }
 
     footer{
-        font-size: 0.4rem;
+        font-size: 0.7rem;
+        flex-direction: column;
     }
 
     .nosotrosAu{
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .manifiesto{
         width: 2rem;
         height: 1.3rem;
         font-size: 0.8rem;
+        flex-direction: column;
+        text-align: center;
+        
     }
 
     .tierra{
-        width: 1rem;
-        height: 0.6rem;
-        font-size: 0.3rem;
+        width: 50%;
+        height: 50%;
+        flex-direction: column;
     }
     .agua{
-        width: 1rem;
-        height: 0.6rem;
-        font-size: 0.3rem;
+        width: 50%;
+        height: 50%;
+        flex-direction: column;
+
     }
     .fuego{
-        width: 1rem;
-        height: 0.6rem;
-        font-size: 0.3rem;
+        width: 50%;
+        height: 50%;
+        flex-direction: column;
     }
     .aire{
-        width: 1rem;
-        height: 0.6rem;
-        font-size: 0.3rem;
+        width: 50%;
+        height: 50%;
+        flex-direction: column;
     }
 
     .titulo{
         font-size: 1rem;
+        flex-direction: column;
     }
     .ContInstagram{
         width: 0.9rem;
